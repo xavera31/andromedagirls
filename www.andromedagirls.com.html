@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Resmi</title>
+  <meta name="description" content="Website profesional modern, cepat, dan responsif." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000000;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      background: radial-gradient(circle at top, rgba(255,77,166,0.25), #000000 60%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle, rgba(255,77,166,0.6), transparent 60%);
+      filter: blur(60px);
+      animation: pinkGlow 6s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+    @keyframes pinkGlow {
+      0% { opacity: 0.4; transform: scale(1); }
+      100% { opacity: 0.8; transform: scale(1.15); }
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: rgba(255,255,255,0.02);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 0 40px rgba(255,77,166,0.15);
+      backdrop-filter: blur(10px);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #ff4da6;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #000000;
+      color: #777;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 34px;
+      background: transparent;
+      color: #ff4da6;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      border: 1px solid rgba(255,77,166,0.6);
+      box-shadow: 0 0 25px rgba(255,77,166,0.5);
+      transition: all 0.4s ease;
+    }
+    a.button:hover {
+      background: #ff4da6;
+      color: #000000;
+      box-shadow: 0 0 50px rgba(255,77,166,0.9);
+    }
+    /* Night-only aesthetic */
+    @media (prefers-color-scheme: light) {
+      body::before {
+        content: "Night mode only";
+        position: fixed;
+        inset: 0;
+        background: #000000;
+        z-index: 9999;
+        display: none;
+      }
+    }
+      /* Film grain noise */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+      opacity: 0.08;
+      pointer-events: none;
+      animation: grain 6s steps(10) infinite;
+      z-index: 999;
+    }
+    @keyframes grain {
+      0% { transform: translate(0,0); }
+      100% { transform: translate(-5%, -5%); }
+    }
+
+    /* Fade delay text */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.4s ease;
+    }
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Deep scroll effect */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div id="quote" style="font-style:italic;color:#ff4da6;margin-bottom:20px;opacity:0.8"></div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Avril_Lavigne_2022.jpg" alt="Inspiration" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:20px;box-shadow:0 0 30px rgba(255,77,166,0.6);" />
+  <h1 class="fade">Andromeda Girls</h1>
+  <p style="color:#ff4da6;">Digital Marketer · Visual Alchemist · UI/UX Explorer</p>
+  <a href="#about" class="button">Explore My World</a>
+</header>
+
+<section id="about" class="fade">
+  <h2>Who Am I</h2>
+  <p>I move quietly within the digital world. Graphic design is not just a skill to me — it is a playground of emotions, symbols, and hidden meanings. Every color, every shape, is a language waiting to be felt rather than explained.</p>
+  <p>I am drawn to UI/UX because I believe good interfaces should feel like silence — calm, intuitive, and almost invisible. When something feels right, you don’t question it. You simply stay.</p>
+  <p>By day, I live as a digital marketer, shaping strategies and stories. By habit, I escape to coffee shops, sitting alone with my thoughts, letting the noise fade into something softer.</p>
+  <p>I find myself most alive among mountains, hiking paths, and natural waterfalls — places where the world speaks without words. I can be many things, capable of many forms, when met with sincerity, warmth, and a love that feels real enough to stay.</p>
+</section>
+
+<section class="fade">
+  <h2>What I Create</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card">
+      <h3>Digital Marketing</h3>
+      <p>Designing quiet yet powerful digital strategies that feel human, not forced.</p>
+    </div>
+    <div class="card">
+      <div class="card">
+      <h3>Graphic Design</h3>
+      <p>Crafting visuals that whisper emotions rather than scream for attention.</p>
+    </div>
+    <div class="card">
+      <div class="card">
+      <h3>UI / UX Design</h3>
+      <p>Shaping interfaces that guide gently, leaving space for feeling and flow.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontak" class="fade">
+  <h2 style="color:#ff4da6;">Connect</h2>
+  <p>If you resonate with this space — whether for collaboration or quiet conversation — you already know how to reach me.</p>
+  <p><strong>Email:</strong> xavera31@gmail.com<br>
+     <strong>Instagram:</strong> @andromedagirlss</p>
+</section>
+
+<footer>
+  <p>© 2026 Website Profesional. All rights reserved.</p>
+</footer>
+
+<iframe style="display:none" src="https://www.youtube.com/embed/0G3_kG5FFfQ?autoplay=1&loop=1&playlist=0G3_kG5FFfQ"></iframe>
+<script>
+  // Fade on scroll
+  const faders = document.querySelectorAll('.fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('show'); }
+    });
+  });
+  faders.forEach(f => observer.observe(f));
+
+  // Random mysterious quotes
+  const quotes = [
+    "Some souls are built for the dark.",
+    "Not everything needs to be understood.",
+    "Silence is also a language.",
+    "I disappear to become whole.",
+    "Soft hearts survive the deepest nights."
+  ];
+  document.getElementById('quote').innerText = quotes[Math.floor(Math.random()*quotes.length)];
+</script>
+</body>
+</html>
